@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/PIWC-Registration/static/css/main.e6c13ad2.css",
+    "main.js": "/PIWC-Registration/static/js/main.e66f80a3.js",
+    "static/js/787.2ca0eb51.chunk.js": "/PIWC-Registration/static/js/787.2ca0eb51.chunk.js",
+    "static/media/piwc-logo-2.png": "/PIWC-Registration/static/media/piwc-logo-2.6d76a4babcb5b4db1a50.png",
+    "static/media/back.jpg": "/PIWC-Registration/static/media/back.1b710bbcaadcfb414c0a.jpg",
+    "index.html": "/PIWC-Registration/index.html",
+    "main.e6c13ad2.css.map": "/PIWC-Registration/static/css/main.e6c13ad2.css.map",
+    "main.e66f80a3.js.map": "/PIWC-Registration/static/js/main.e66f80a3.js.map",
+    "787.2ca0eb51.chunk.js.map": "/PIWC-Registration/static/js/787.2ca0eb51.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e66f80a3.js"
+  ]
+}
