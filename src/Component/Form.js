@@ -41,7 +41,9 @@ const Card = styled.div`
 `;
 
 const Logo = styled.div`
-
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 `;
 const Title = styled.h2`
   text-align: center;
