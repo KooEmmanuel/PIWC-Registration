@@ -7,17 +7,19 @@ import backgroundImg  from "./back.jpg"; // Import the image
 
 
 const Container = styled.div`
-background-image: url(${backgroundImg});
-background-size: cover; /* Cover the entire viewport */
-background-repeat: no-repeat;
-background-attachment: fixed; /* Fixed background */
-min-height: 100vh;
-overflow: hidden; /* Prevent content overflow */
-padding: 20px 10px; /* Adjust the padding for smaller screens */
-display: flex;
-flex-direction: column;
-justify-content: center; /* Center content horizontally */
-align-items: center; /* Center content vertically */
+   background-image: url(${backgroundImg});
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed background */
+  min-height: 100vh;
+  overflow: hidden; /* Prevent content overflow */
+  padding: 20px 10px; /* Adjust the padding for smaller screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden; /* Prevent content overflow */
+
   @media (max-width: 1000px) {
     padding: 20px 10px; /* Adjust the padding for smaller screens */
     width: 100%;
