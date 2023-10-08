@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./Component/Form"; // Import your Form component here
 
 function App() {
+  const [showForm, setShowForm] = useState(true); // Initial state: form is visible
+
+  // Function to toggle the visibility of the form
+  const toggleFormVisibility = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showForm ? (
+        <Form toggleFormVisibility={toggleFormVisibility} />
+      ) : (
+        <div>
+          {/* Content to show after form submission */}
+          <h2>Thank you for submitting the form!</h2>
+          <p>Any additional content you want to display.</p>
+        </div>
+      )}
     </div>
   );
 }
