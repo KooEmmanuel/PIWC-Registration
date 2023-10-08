@@ -4,10 +4,11 @@ import { db } from "../firebase"; // Import your Firebase configuration
 import { collection, addDoc } from "firebase/firestore"; // Import Firestore functions
 import piwcLogo from "./piwc-logo-2.png"; // Import the image
 import backgroundImg  from "./back.jpg"; // Import the image
+import backgroundImg1  from "./peakpx.jpg"; // Import the image
 
 
 const Container = styled.div`
-   background-image: url(${backgroundImg});
+  background-image: url(${backgroundImg});
   background-size: cover; /* Cover the entire viewport */
   background-repeat: no-repeat;
   background-attachment: fixed; /* Fixed background */
@@ -18,9 +19,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  overflow: hidden; /* Prevent content overflow */
-
   @media (max-width: 1000px) {
+    background-image: url(${backgroundImg1}); /* Use mobile background image */
+    background-size: cover; /* Set the background image to cover on mobile */
     padding: 20px 10px; /* Adjust the padding for smaller screens */
     width: 100%;
   }
@@ -32,18 +33,22 @@ const Card = styled.div`
   padding: 100px;
   width: 50%; /* Set the width to 100% */
   text-align: center;
-  margin: auto;
+//   margin: auto;
   @media (max-width: 1000px) {
     padding: 20px 20px; /* Adjust the padding for smaller screens */
     width: 100%;
   }
 `;
 
+const Logo = styled.div`
 
+`;
 const Title = styled.h2`
   text-align: center;
-  margin-top: 200px;
+  margin-top: 20px;
+  color: #063970; /* Set the text color to #063970 (blue) */
 `;
+
 
 const FormContainer = styled.div`
   display: flex;
@@ -97,7 +102,13 @@ const Footer = styled.div`
   align-items: center; /* Center vertically */
   padding: 20px; /* Add padding for space on both sides */
   margin-top: 20px; /* Add margin-top for space */
+  color: white; /* Set the text color to white */
+
+  @media (max-width: 768px) {
+    font-size: 10px; /* Set the font size to 10px on smaller screens */
+  }
 `;
+
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -147,6 +158,9 @@ function Form() {
 
   return (
     <Container>
+     <Logo>      
+        <img src={piwcLogo} alt="Your Logo" width="500" height="80" /> {/* Use the imported image */}
+    </Logo>
       <Title>Register for Service</Title>
       <Card>
         <FormContainer>
@@ -231,7 +245,7 @@ function Form() {
         </FormContainer>
       </Card>
       <Footer>
-      <img src={piwcLogo} alt="Your Logo" width="220" height="70" /> {/* Use the imported image */}
+      <img src={piwcLogo} alt="Your Logo" width="320" height="70" /> {/* Use the imported image */}
         <div>&copy; {new Date().getFullYear()} Pentecost International Worship Center </div>
       </Footer>
     </Container>
