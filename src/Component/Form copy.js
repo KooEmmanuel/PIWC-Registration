@@ -19,7 +19,7 @@ const Card = styled.div`
   border-radius: 2px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
   padding: 100px;
-  width: 40%; /* Set the width to 100% */
+  width: 100%; /* Set the width to 100% */
   text-align: center;
   margin: auto;
   @media (max-width: 500px) {
