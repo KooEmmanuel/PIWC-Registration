@@ -7,23 +7,33 @@ import backgroundImg  from "./back.jpg"; // Import the image
 
 
 const Container = styled.div`
-  background-image: url(${backgroundImg}); /* Set the background image */
-  background-size: cover; /* Cover the entire viewport */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixed background */
-  min-height: 100vh;
-  overflow: hidden; /* Prevent content overflow */
+background-image: url(${backgroundImg});
+background-size: cover; /* Cover the entire viewport */
+background-repeat: no-repeat;
+background-attachment: fixed; /* Fixed background */
+min-height: 100vh;
+overflow: hidden; /* Prevent content overflow */
+padding: 20px 10px; /* Adjust the padding for smaller screens */
+display: flex;
+flex-direction: column;
+justify-content: center; /* Center content horizontally */
+align-items: center; /* Center content vertically */
+  @media (max-width: 1000px) {
+    padding: 20px 10px; /* Adjust the padding for smaller screens */
+    width: 100%;
+  }
 `;
 
 const Card = styled.div`
   border-radius: 2px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
   padding: 100px;
-  width: 40%; /* Set the width to 100% */
+  width: 50%; /* Set the width to 100% */
   text-align: center;
   margin: auto;
-  @media (max-width: 500px) {
-    padding: 20px 10px; /* Adjust the padding for smaller screens */
+  @media (max-width: 1000px) {
+    padding: 20px 20px; /* Adjust the padding for smaller screens */
+    width: 100%;
   }
 `;
 
